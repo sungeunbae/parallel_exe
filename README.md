@@ -30,9 +30,8 @@ Default wall time is 1 hour, which can be short. Adjust this as needed, but the 
 ```
 If the maximum 24 hours is too short to complete all the jobs, see below and follow the instruction for "Resuming"
 
- 
 
-```
+
 
 # Submit the slurm script
 
