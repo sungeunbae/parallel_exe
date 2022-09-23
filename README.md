@@ -15,13 +15,14 @@ OpenSees /home/fkw21/2022_QuakeCoRE_AM_Poster/Analysis/OpenSeesModels/CACS/CACS_
 OpenSees /home/fkw21/2022_QuakeCoRE_AM_Poster/Analysis/OpenSeesModels/CACS/CACS_TotalStress_LR0.0_600.tcl CACS TotalStress_LR0.0_600  /nesi/nobackup/nesi00213/RunFolder/Validation/2022_QuakeCoRE_AM_Poster_FKuncar/inputMotions/v6_2022-08-19/2012p014309/CACS/2012p014309_090_PGA0.006_sf1.00_11409_0.005_vel.txt 2012p014309_090_PGA0.006_sf1.00 11409 0.005 /nesi/nobackup/nesi00213/RunFolder/baes/parallel_exe_test >/nesi/nobackup/nesi00213/RunFolder/baes/parallel_exe_test/CACS_TotalStress_LR0.0_600_2012p014309_090_PGA0.006_sf1.00_output.out 2>/nesi/nobackup/nesi00213/RunFolder/baes/parallel_exe_test/CACS_TotalStress_LR0.0_600_2012p014309_090_PGA0.006_sf1.00_stderror.out
 OpenSees /home/fkw21/2022_QuakeCoRE_AM_Poster/Analysis/OpenSeesModels/CACS/CACS_TotalStress_LR0.0_600.tcl CACS TotalStress_LR0.0_600  /nesi/nobackup/nesi00213/RunFolder/Validation/2022_QuakeCoRE_AM_Poster_FKuncar/inputMotions/v6_2022-08-19/2012p014905/CACS/2012p014905_000_PGA0.009_sf1.00_16008_0.005_vel.txt 2012p014905_000_PGA0.009_sf1.00 16008 0.005 /nesi/nobackup/nesi00213/RunFolder/baes/parallel_exe_test >/nesi/nobackup/nesi00213/RunFolder/baes/parallel_exe_test/CACS_TotalStress_LR0.0_600_2012p014905_000_PGA0.009_sf1.00_output.out 2>/nesi/nobackup/nesi00213/RunFolder/baes/parallel_exe_test/CACS_TotalStress_LR0.0_600_2012p014905_000_PGA0.009_sf1.00_stderror.out
 OpenSees /home/fkw21/2022_QuakeCoRE_AM_Poster/Analysis/OpenSeesModels/CACS/CACS_TotalStress_LR0.0_600.tcl CACS TotalStress_LR0.0_600  /nesi/nobackup/nesi00213/RunFolder/Validation/2022_QuakeCoRE_AM_Poster_FKuncar/inputMotions/v6_2022-08-19/2012p014905/CACS/2012p014905_090_PGA0.011_sf1.00_16008_0.005_vel.txt 2012p014905_090_PGA0.011_sf1.00 16008 0.005 /nesi/nobackup/nesi00213/RunFolder/baes/parallel_exe_test >/nesi/nobackup/nesi00213/RunFolder/baes/parallel_exe_test/CACS_TotalStress_LR0.0_600_2012p014905_090_PGA0.011_sf1.00_output.out 2>/nesi/nobackup/nesi00213/RunFolder/baes/parallel_exe_test/CACS_TotalStress_LR0.0_600_2012p014905_090_PGA0.011_sf1.00_stderror.out
+```
 
 # Edit slurm script
 
 Edit `parallel_exe_mahuika.sl` or `parallel_exe_maui.sl` and replace the job file name if needed.
 ```
 time python parallel_exe.py `pwd`/sample_jobfile
-
+```
 By default, the slurm script is configured to utilize 40 CPU cores (Mahuika) and 36 cores (Maui). You can probably leave this as it as (unless your jobfile contains small number of jobs)
 Default wall time is 1 hour, which can be short. Adjust this as needed, but the maximum wall time is 24 hours.
 
