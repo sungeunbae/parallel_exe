@@ -55,7 +55,7 @@ sbatch --export=ALL parallel_exe_maui.sl ----> Maui
 # Resuming
 
 If you rerun the script `parallel_exe.py` (by submitting a slurm job), it is designed to automatically resume from the checkpoint.
-The checkpoint directory contains files such as `00000.done`, `00001.done`, meaning the jobs of id 0 and 1 have been already produced.
+The checkpoint directory contains files such as `00000.done`, `00001.done`, meaning the jobs of id 0 and 1 have been already completed. (TODO: It doesn't check if the run was successful or not)
 
 The job ids are automatically assigned when it is first executed, and the job id and job association is stored as `sample_jobfile.json`
 
