@@ -89,7 +89,7 @@ If you have a need to avoid "resuming", use `--no-resume` option for `parallel_e
 
 
 
-### Old way
+## Old way (as a reference)
 
 Instead of using `parallel_exe.py`, you can run commands in `sample_jobfile` directly. The SLURM script below is designed to run each line from sample__jobfile, and run them in parallel utilizing 36 cores of 1 node (of Mahuika). 
 
