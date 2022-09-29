@@ -24,12 +24,12 @@ Edit `parallel_exe_mahuika.sl` or `parallel_exe_maui.sl` and replace the job fil
 time python parallel_exe.py `pwd`/sample_jobfile
 ```
 By default, the slurm script is configured to utilize 40 CPU cores (Mahuika) and 36 cores (Maui). You can probably leave this as it as (unless your jobfile contains small number of jobs)
-Default wall time is 1 hour, which can be short. Adjust this as needed, but the maximum wall time is 24 hours.
+Default wall time is 1 hour, which can be short. Adjust this as needed, but the maximum wall time is 24 hours (Maui) and 72 hours (Mahuika, large partition). See https://wiki.canterbury.ac.nz/display/QuakeCore/HPC+Comparison+chart
 
 ```
 #SBATCH --time=01:00:00              # Walltime (HH:MM:SS)
 ```
-If the maximum 24 hours is too short to complete all the jobs, see below and follow the instruction for "Resuming"
+If the maximum wall time is too short to complete all the jobs, see below and follow the instruction for "Resuming"
 
 
 
