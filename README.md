@@ -89,13 +89,12 @@ If you have a need to avoid "resuming", use `--no-resume` option for `parallel_e
 
 
 
-# Old way (as a reference)
+# Old way : Why this solution matters?
 
 Instead of using `parallel_exe.py`, you can run commands in `sample_jobfile` directly. The SLURM script below is designed to run each line from sample__jobfile, and run them in parallel utilizing 36 cores of 1 node (of Mahuika). 
 
 The first `while` block parses the job file, put them into `commands` array. Each `cmnd` from this array gets executed, it runs in the background (`&` after the command), making the iterations in the for loop asynchronous. Also notice the `wait` after the for loop. The beauty of this solution is that when a CPU core finishes one job, it comes back to the for loop and takes a new job.
 
-This may be good enough for large number of small jobs. However, if the total duration of your jobs exceeds the maximum wall time allowed by your HPC, you will need to consider a solution that supports "checkpoint/resuming". That's why parallel_exe.py was created.
 ```
 #!/bin/bash
 ...
@@ -124,3 +123,7 @@ do
 done
 wait
 ```
+
+This may be good enough for large number of small jobs. However, if the total duration of your jobs exceeds the maximum wall time allowed by your HPC, what do you do? If you have completed 9000 out of 10000 jobs after 24 hours. You can modify your job file, remove all the jobs that have been completed, then resubmit. This is a manual way of "checkpointing/resuming".
+
+I wanted this done automatically. That's why parallel_exe.py was created.
