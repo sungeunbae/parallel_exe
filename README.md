@@ -1,8 +1,6 @@
 # Preparation
-
-## Make a job list file
-
-Suppose you want to execute the following 10 jobs. Make a file that contains this list.Each line should be a valid command that can run. Let's call this `sample_jobfile`.
+## Background
+Suppose you want to execute the following 10 jobs. They are all `OpenSees` with different input parameters and input files. 
 
 ```
 OpenSees /home/fkw21/2022_QuakeCoRE_AM_Poster/Analysis/OpenSeesModels/CACS/CACS_TotalStress_LR0.0_600.tcl CACS TotalStress_LR0.0_600  /nesi/nobackup/nesi00213/RunFolder/Validation/2022_QuakeCoRE_AM_Poster_FKuncar/inputMotions/v6_2022-08-19/2012p001403/CACS/2012p001403_000_PGA0.010_sf1.00_16008_0.005_vel.txt 2012p001403_000_PGA0.010_sf1.00 16008 0.005 /nesi/nobackup/nesi00213/RunFolder/baes/parallel_exe_test >/nesi/nobackup/nesi00213/RunFolder/baes/parallel_exe_test/CACS_TotalStress_LR0.0_600_2012p001403_000_PGA0.010_sf1.00_output.out 2>/nesi/nobackup/nesi00213/RunFolder/baes/parallel_exe_test/CACS_TotalStress_LR0.0_600_2012p001403_000_PGA0.010_sf1.00_stderror.out
@@ -16,6 +14,15 @@ OpenSees /home/fkw21/2022_QuakeCoRE_AM_Poster/Analysis/OpenSeesModels/CACS/CACS_
 OpenSees /home/fkw21/2022_QuakeCoRE_AM_Poster/Analysis/OpenSeesModels/CACS/CACS_TotalStress_LR0.0_600.tcl CACS TotalStress_LR0.0_600  /nesi/nobackup/nesi00213/RunFolder/Validation/2022_QuakeCoRE_AM_Poster_FKuncar/inputMotions/v6_2022-08-19/2012p014905/CACS/2012p014905_000_PGA0.009_sf1.00_16008_0.005_vel.txt 2012p014905_000_PGA0.009_sf1.00 16008 0.005 /nesi/nobackup/nesi00213/RunFolder/baes/parallel_exe_test >/nesi/nobackup/nesi00213/RunFolder/baes/parallel_exe_test/CACS_TotalStress_LR0.0_600_2012p014905_000_PGA0.009_sf1.00_output.out 2>/nesi/nobackup/nesi00213/RunFolder/baes/parallel_exe_test/CACS_TotalStress_LR0.0_600_2012p014905_000_PGA0.009_sf1.00_stderror.out
 OpenSees /home/fkw21/2022_QuakeCoRE_AM_Poster/Analysis/OpenSeesModels/CACS/CACS_TotalStress_LR0.0_600.tcl CACS TotalStress_LR0.0_600  /nesi/nobackup/nesi00213/RunFolder/Validation/2022_QuakeCoRE_AM_Poster_FKuncar/inputMotions/v6_2022-08-19/2012p014905/CACS/2012p014905_090_PGA0.011_sf1.00_16008_0.005_vel.txt 2012p014905_090_PGA0.011_sf1.00 16008 0.005 /nesi/nobackup/nesi00213/RunFolder/baes/parallel_exe_test >/nesi/nobackup/nesi00213/RunFolder/baes/parallel_exe_test/CACS_TotalStress_LR0.0_600_2012p014905_090_PGA0.011_sf1.00_output.out 2>/nesi/nobackup/nesi00213/RunFolder/baes/parallel_exe_test/CACS_TotalStress_LR0.0_600_2012p014905_090_PGA0.011_sf1.00_stderror.out
 ```
+
+You can certainly run these one by one, but it can be cumbersome. Imagine you have thousands of them. It can be slow too.
+If you have an access to an HPC and can utilize many CPU cores, you can run these jobs simultaneously.
+
+
+## Make a job list file
+
+Make a file that contains this list of commands to run.Each line should be a valid command that can run. Let's call this `sample_jobfile`.
+
 
 # Edit slurm script
 
