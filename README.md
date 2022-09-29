@@ -24,6 +24,7 @@ If you have an access to an HPC and can utilize many CPU cores, you can run thes
 Make a file that contains this list of commands to run. Each line should be a valid command that can run. Let's call this `sample_jobfile`.
 
 
+
 # Edit slurm script
 
 Edit `parallel_exe_mahuika.sl` or `parallel_exe_maui.sl` and replace the job file name if needed.
@@ -68,16 +69,16 @@ The job ids are automatically assigned when it is first executed, and the job id
 
 ```
 {
-    "0": "OpenSees /home/fkw21/2022_QuakeCoRE_AM_Poster/Analysis/OpenSeesModels/CACS/CACS_TotalStress_LR0.0_600.tcl CACS TotalStress_LR0.0_600  /nesi/nobackup/nesi00213/RunFolder/Validation/2022_QuakeCoRE_AM_Poster_FKuncar/inputMotions/v6_2022-08-19/2012p001403/CACS/2012p001403_000_PGA0.010_sf1.00_16008_0.005_vel.txt 2012p001403_000_PGA0.010_sf1.00 16008 0.005 /nesi/nobackup/nesi00213/RunFolder/baes/parallel_exe_test >/nesi/nobackup/nesi00213/RunFolder/baes/parallel_exe_test/CACS_TotalStress_LR0.0_600_2012p001403_000_PGA0.010_sf1.00_output.out 2>/nesi/nobackup/nesi00213/RunFolder/baes/parallel_exe_test/CACS_TotalStress_LR0.0_600_2012p001403_000_PGA0.010_sf1.00_stderror.out",
-    "1": "OpenSees /home/fkw21/2022_QuakeCoRE_AM_Poster/Analysis/OpenSeesModels/CACS/CACS_TotalStress_LR0.0_600.tcl CACS TotalStress_LR0.0_600  /nesi/nobackup/nesi00213/RunFolder/Validation/2022_QuakeCoRE_AM_Poster_FKuncar/inputMotions/v6_2022-08-19/2012p001403/CACS/2012p001403_090_PGA0.016_sf1.00_16008_0.005_vel.txt 2012p001403_090_PGA0.016_sf1.00 16008 0.005 /nesi/nobackup/nesi00213/RunFolder/baes/parallel_exe_test >/nesi/nobackup/nesi00213/RunFolder/baes/parallel_exe_test/CACS_TotalStress_LR0.0_600_2012p001403_090_PGA0.016_sf1.00_output.out 2>/nesi/nobackup/nesi00213/RunFolder/baes/parallel_exe_test/CACS_TotalStress_LR0.0_600_2012p001403_090_PGA0.016_sf1.00_stderror.out",
-    "2": "OpenSees /home/fkw21/2022_QuakeCoRE_AM_Poster/Analysis/OpenSeesModels/CACS/CACS_TotalStress_LR0.0_600.tcl CACS TotalStress_LR0.0_600  /nesi/nobackup/nesi00213/RunFolder/Validation/2022_QuakeCoRE_AM_Poster_FKuncar/inputMotions/v6_2022-08-19/2012p003376/CACS/2012p003376_000_PGA0.007_sf1.00_14447_0.005_vel.txt 2012p003376_000_PGA0.007_sf1.00 14447 0.005 /nesi/nobackup/nesi00213/RunFolder/baes/parallel_exe_test >/nesi/nobackup/nesi00213/RunFolder/baes/parallel_exe_test/CACS_TotalStress_LR0.0_600_2012p003376_000_PGA0.007_sf1.00_output.out 2>/nesi/nobackup/nesi00213/RunFolder/baes/parallel_exe_test/CACS_TotalStress_LR0.0_600_2012p003376_000_PGA0.007_sf1.00_stderror.out",
-    "3": "OpenSees /home/fkw21/2022_QuakeCoRE_AM_Poster/Analysis/OpenSeesModels/CACS/CACS_TotalStress_LR0.0_600.tcl CACS TotalStress_LR0.0_600  /nesi/nobackup/nesi00213/RunFolder/Validation/2022_QuakeCoRE_AM_Poster_FKuncar/inputMotions/v6_2022-08-19/2012p003376/CACS/2012p003376_090_PGA0.010_sf1.00_14447_0.005_vel.txt 2012p003376_090_PGA0.010_sf1.00 14447 0.005 /nesi/nobackup/nesi00213/RunFolder/baes/parallel_exe_test >/nesi/nobackup/nesi00213/RunFolder/baes/parallel_exe_test/CACS_TotalStress_LR0.0_600_2012p003376_090_PGA0.010_sf1.00_output.out 2>/nesi/nobackup/nesi00213/RunFolder/baes/parallel_exe_test/CACS_TotalStress_LR0.0_600_2012p003376_090_PGA0.010_sf1.00_stderror.out",
-    "4": "OpenSees /home/fkw21/2022_QuakeCoRE_AM_Poster/Analysis/OpenSeesModels/CACS/CACS_TotalStress_LR0.0_600.tcl CACS TotalStress_LR0.0_600  /nesi/nobackup/nesi00213/RunFolder/Validation/2022_QuakeCoRE_AM_Poster_FKuncar/inputMotions/v6_2022-08-19/2012p010301/CACS/2012p010301_000_PGA0.009_sf1.00_12637_0.005_vel.txt 2012p010301_000_PGA0.009_sf1.00 12637 0.005 /nesi/nobackup/nesi00213/RunFolder/baes/parallel_exe_test >/nesi/nobackup/nesi00213/RunFolder/baes/parallel_exe_test/CACS_TotalStress_LR0.0_600_2012p010301_000_PGA0.009_sf1.00_output.out 2>/nesi/nobackup/nesi00213/RunFolder/baes/parallel_exe_test/CACS_TotalStress_LR0.0_600_2012p010301_000_PGA0.009_sf1.00_stderror.out",
-    "5": "OpenSees /home/fkw21/2022_QuakeCoRE_AM_Poster/Analysis/OpenSeesModels/CACS/CACS_TotalStress_LR0.0_600.tcl CACS TotalStress_LR0.0_600  /nesi/nobackup/nesi00213/RunFolder/Validation/2022_QuakeCoRE_AM_Poster_FKuncar/inputMotions/v6_2022-08-19/2012p010301/CACS/2012p010301_090_PGA0.010_sf1.00_12637_0.005_vel.txt 2012p010301_090_PGA0.010_sf1.00 12637 0.005 /nesi/nobackup/nesi00213/RunFolder/baes/parallel_exe_test >/nesi/nobackup/nesi00213/RunFolder/baes/parallel_exe_test 2>/nesi/nobackup/nesi00213/RunFolder/baes/parallel_exe_test/CACS_TotalStress_LR0.0_600_2012p010301_090_PGA0.010_sf1.00_stderror.out",
-    "6": "OpenSees /home/fkw21/2022_QuakeCoRE_AM_Poster/Analysis/OpenSeesModels/CACS/CACS_TotalStress_LR0.0_600.tcl CACS TotalStress_LR0.0_600  /nesi/nobackup/nesi00213/RunFolder/Validation/2022_QuakeCoRE_AM_Poster_FKuncar/inputMotions/v6_2022-08-19/2012p014309/CACS/2012p014309_000_PGA0.005_sf1.00_11409_0.005_vel.txt 2012p014309_000_PGA0.005_sf1.00 11409 0.005 /nesi/nobackup/nesi00213/RunFolder/baes/parallel_exe_test >/nesi/nobackup/nesi00213/RunFolder/baes/parallel_exe_test/CACS_TotalStress_LR0.0_600_2012p014309_000_PGA0.005_sf1.00_output.out 2>/nesi/nobackup/nesi00213/RunFolder/baes/parallel_exe_test/CACS_TotalStress_LR0.0_600_2012p014309_000_PGA0.005_sf1.00_stderror.out",
-    "7": "OpenSees /home/fkw21/2022_QuakeCoRE_AM_Poster/Analysis/OpenSeesModels/CACS/CACS_TotalStress_LR0.0_600.tcl CACS TotalStress_LR0.0_600  /nesi/nobackup/nesi00213/RunFolder/Validation/2022_QuakeCoRE_AM_Poster_FKuncar/inputMotions/v6_2022-08-19/2012p014309/CACS/2012p014309_090_PGA0.006_sf1.00_11409_0.005_vel.txt 2012p014309_090_PGA0.006_sf1.00 11409 0.005 /nesi/nobackup/nesi00213/RunFolder/baes/parallel_exe_test >/nesi/nobackup/nesi00213/RunFolder/baes/parallel_exe_test/CACS_TotalStress_LR0.0_600_2012p014309_090_PGA0.006_sf1.00_output.out 2>/nesi/nobackup/nesi00213/RunFolder/baes/parallel_exe_test/CACS_TotalStress_LR0.0_600_2012p014309_090_PGA0.006_sf1.00_stderror.out",
-    "8": "OpenSees /home/fkw21/2022_QuakeCoRE_AM_Poster/Analysis/OpenSeesModels/CACS/CACS_TotalStress_LR0.0_600.tcl CACS TotalStress_LR0.0_600  /nesi/nobackup/nesi00213/RunFolder/Validation/2022_QuakeCoRE_AM_Poster_FKuncar/inputMotions/v6_2022-08-19/2012p014905/CACS/2012p014905_000_PGA0.009_sf1.00_16008_0.005_vel.txt 2012p014905_000_PGA0.009_sf1.00 16008 0.005 /nesi/nobackup/nesi00213/RunFolder/baes/parallel_exe_test >/nesi/nobackup/nesi00213/RunFolder/baes/parallel_exe_test/CACS_TotalStress_LR0.0_600_2012p014905_000_PGA0.009_sf1.00_output.out 2>/nesi/nobackup/nesi00213/RunFolder/baes/parallel_exe_test/CACS_TotalStress_LR0.0_600_2012p014905_000_PGA0.009_sf1.00_stderror.out",
-    "9": "OpenSees /home/fkw21/2022_QuakeCoRE_AM_Poster/Analysis/OpenSeesModels/CACS/CACS_TotalStress_LR0.0_600.tcl CACS TotalStress_LR0.0_600  /nesi/nobackup/nesi00213/RunFolder/Validation/2022_QuakeCoRE_AM_Poster_FKuncar/inputMotions/v6_2022-08-19/2012p014905/CACS/2012p014905_090_PGA0.011_sf1.00_16008_0.005_vel.txt 2012p014905_090_PGA0.011_sf1.00 16008 0.005 /nesi/nobackup/nesi00213/RunFolder/baes/parallel_exe_test >/nesi/nobackup/nesi00213/RunFolder/baes/parallel_exe_test/CACS_TotalStress_LR0.0_600_2012p014905_090_PGA0.011_sf1.00_output.out 2>/nesi/nobackup/nesi00213/RunFolder/baes/parallel_exe_test/CACS_TotalStress_LR0.0_600_2012p014905_090_PGA0.011_sf1.00_stderror.out"
+    "0": "OpenSees /home/fkw21/2022_QuakeCoRE_AM_Poster/Analysis/OpenSeesModels/CACS/CACS_TotalStress_LR0.0_600.tcl CACS TotalStress_LR0.0_600  /nesi/nobackup/nesi00213/RunFolder/Validation/2022_QuakeCoRE_AM_Poster_FKuncar/inputMotions/v6_2022-08-19/2012p001403/CACS/2012p001403_000_PGA0.010_sf1.00_16008_0.005_vel.txt 2012p001403_000_PGA0.010_sf1.00 16008 0.005 /nesi/nobackup/nesi00213/RunFolder/baes/parallel_exe_test,
+    "1": "OpenSees /home/fkw21/2022_QuakeCoRE_AM_Poster/Analysis/OpenSeesModels/CACS/CACS_TotalStress_LR0.0_600.tcl CACS TotalStress_LR0.0_600  /nesi/nobackup/nesi00213/RunFolder/Validation/2022_QuakeCoRE_AM_Poster_FKuncar/inputMotions/v6_2022-08-19/2012p001403/CACS/2012p001403_090_PGA0.016_sf1.00_16008_0.005_vel.txt 2012p001403_090_PGA0.016_sf1.00 16008 0.005 /nesi/nobackup/nesi00213/RunFolder/baes/parallel_exe_test,
+    "2": "OpenSees /home/fkw21/2022_QuakeCoRE_AM_Poster/Analysis/OpenSeesModels/CACS/CACS_TotalStress_LR0.0_600.tcl CACS TotalStress_LR0.0_600  /nesi/nobackup/nesi00213/RunFolder/Validation/2022_QuakeCoRE_AM_Poster_FKuncar/inputMotions/v6_2022-08-19/2012p003376/CACS/2012p003376_000_PGA0.007_sf1.00_14447_0.005_vel.txt 2012p003376_000_PGA0.007_sf1.00 14447 0.005 /nesi/nobackup/nesi00213/RunFolder/baes/parallel_exe_test,
+    "3": "OpenSees /home/fkw21/2022_QuakeCoRE_AM_Poster/Analysis/OpenSeesModels/CACS/CACS_TotalStress_LR0.0_600.tcl CACS TotalStress_LR0.0_600  /nesi/nobackup/nesi00213/RunFolder/Validation/2022_QuakeCoRE_AM_Poster_FKuncar/inputMotions/v6_2022-08-19/2012p003376/CACS/2012p003376_090_PGA0.010_sf1.00_14447_0.005_vel.txt 2012p003376_090_PGA0.010_sf1.00 14447 0.005 /nesi/nobackup/nesi00213/RunFolder/baes/parallel_exe_test,
+    "4": "OpenSees /home/fkw21/2022_QuakeCoRE_AM_Poster/Analysis/OpenSeesModels/CACS/CACS_TotalStress_LR0.0_600.tcl CACS TotalStress_LR0.0_600  /nesi/nobackup/nesi00213/RunFolder/Validation/2022_QuakeCoRE_AM_Poster_FKuncar/inputMotions/v6_2022-08-19/2012p010301/CACS/2012p010301_000_PGA0.009_sf1.00_12637_0.005_vel.txt 2012p010301_000_PGA0.009_sf1.00 12637 0.005 /nesi/nobackup/nesi00213/RunFolder/baes/parallel_exe_test,
+    "5": "OpenSees /home/fkw21/2022_QuakeCoRE_AM_Poster/Analysis/OpenSeesModels/CACS/CACS_TotalStress_LR0.0_600.tcl CACS TotalStress_LR0.0_600  /nesi/nobackup/nesi00213/RunFolder/Validation/2022_QuakeCoRE_AM_Poster_FKuncar/inputMotions/v6_2022-08-19/2012p010301/CACS/2012p010301_090_PGA0.010_sf1.00_12637_0.005_vel.txt 2012p010301_090_PGA0.010_sf1.00 12637 0.005 /nesi/nobackup/nesi00213/RunFolder/baes/parallel_exe_test,
+    "6": "OpenSees /home/fkw21/2022_QuakeCoRE_AM_Poster/Analysis/OpenSeesModels/CACS/CACS_TotalStress_LR0.0_600.tcl CACS TotalStress_LR0.0_600  /nesi/nobackup/nesi00213/RunFolder/Validation/2022_QuakeCoRE_AM_Poster_FKuncar/inputMotions/v6_2022-08-19/2012p014309/CACS/2012p014309_000_PGA0.005_sf1.00_11409_0.005_vel.txt 2012p014309_000_PGA0.005_sf1.00 11409 0.005 /nesi/nobackup/nesi00213/RunFolder/baes/parallel_exe_test,
+    "7": "OpenSees /home/fkw21/2022_QuakeCoRE_AM_Poster/Analysis/OpenSeesModels/CACS/CACS_TotalStress_LR0.0_600.tcl CACS TotalStress_LR0.0_600  /nesi/nobackup/nesi00213/RunFolder/Validation/2022_QuakeCoRE_AM_Poster_FKuncar/inputMotions/v6_2022-08-19/2012p014309/CACS/2012p014309_090_PGA0.006_sf1.00_11409_0.005_vel.txt 2012p014309_090_PGA0.006_sf1.00 11409 0.005 /nesi/nobackup/nesi00213/RunFolder/baes/parallel_exe_test,
+    "8": "OpenSees /home/fkw21/2022_QuakeCoRE_AM_Poster/Analysis/OpenSeesModels/CACS/CACS_TotalStress_LR0.0_600.tcl CACS TotalStress_LR0.0_600  /nesi/nobackup/nesi00213/RunFolder/Validation/2022_QuakeCoRE_AM_Poster_FKuncar/inputMotions/v6_2022-08-19/2012p014905/CACS/2012p014905_000_PGA0.009_sf1.00_16008_0.005_vel.txt 2012p014905_000_PGA0.009_sf1.00 16008 0.005 /nesi/nobackup/nesi00213/RunFolder/baes/parallel_exe_test,
+    "9": "OpenSees /home/fkw21/2022_QuakeCoRE_AM_Poster/Analysis/OpenSeesModels/CACS/CACS_TotalStress_LR0.0_600.tcl CACS TotalStress_LR0.0_600  /nesi/nobackup/nesi00213/RunFolder/Validation/2022_QuakeCoRE_AM_Poster_FKuncar/inputMotions/v6_2022-08-19/2012p014905/CACS/2012p014905_090_PGA0.011_sf1.00_16008_0.005_vel.txt 2012p014905_090_PGA0.011_sf1.00 16008 0.005 /nesi/nobackup/nesi00213/RunFolder/baes/parallel_exe_test
 }
 ```
 
@@ -88,3 +89,38 @@ If you have a need to avoid "resuming", use `--no-resume` option for `parallel_e
 
 
 
+### Old way
+
+Instead of using `parallel_exe.py`, you can run commands in `sample_jobfile` directly. The SLURM script below is designed to run each line from sample__jobfile, and run them in parallel utilizing 36 cores of 1 node (of Mahuika). 
+
+The first `while` block parses the job file, put them into `commands` array. Each `cmnd` from this array gets executed, it runs in the background (`&` after the command), making the iterations in the for loop asynchronous. Also notice the `wait` after the for loop. The beauty of this solution is that when a CPU core finishes one job, it comes back to the for loop and takes a new job. This, however, has no "checkpointing" feature unlike `parallel_exe.py`.
+
+
+```
+#!/bin/bash
+...
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=36
+#SBATCH --cpus-per-task=1
+...
+
+count=0
+while IFS='' read -r line || [[ -n "$line" ]]; do
+#    echo "Text read from file: $line"
+    if [[ ${line:0:1} == '#' ]]
+    then
+        echo "comment:$line"
+    else
+        commands[count]=${line}
+        count=$(( $count + 1 ))
+    fi
+#    echo ${commands[count]}
+done < sample_jobfile
+
+for cmnd in "${commands[@]}"
+do
+#    echo $cmnd
+    srun -n1 --exclusive $cmnd &
+done
+wait
+```
